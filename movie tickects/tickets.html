@@ -1,0 +1,122 @@
+<html> 
+<head> 
+ 
+
+<style> 
+Ticket{										 
+	margin-left:10px; 
+	font-weight: bold ; 
+	float: left; 
+	clear: left; 
+	width: 100px; 
+	text-align: left; 
+	margin-right: 10px; 
+	font-family:sans-serif,bold, Arial, Helvetica; 
+	font-size:28px; 
+} 
+
+div { 
+	box-sizing: border-box; 
+	width: 100%; 
+	border: 8px solid black; 
+	float: left; 
+	align-content: left; 
+	align-items: left; 
+} 
+
+form {										 
+	margin: 0 auto; 
+	width: 100px; 
+       background-image: url("‪C:\Users\Keerthi\Downloads\download (5).jpg");
+
+}
+.container{
+background-image: url("‪C:\Users\Keerthi\Downloads\download (5).jpg");
+
+}
+</style></head> 
+
+
+<body> 
+<script> 
+function Ticket()								 
+{
+<img src="‪C:\Users\Keerthi\Downloads\download (5).jpg"> 
+	var name = document.forms["RegForm"]["Name"];			 
+	 
+	var phone = document.forms["RegForm"]["Telephone"]; 
+	 
+	
+	
+
+	if (name.value == "")								 
+	{ 
+		window.alert("Please enter your name."); 
+		name.focus(); 
+		return false; 
+	} 
+
+	
+	
+	} 
+
+	if (phone.value == "")						 
+	{ 
+		window.alert("Please enter your telephone number."); 
+		phone.focus(); 
+		return false; 
+	} 
+
+	} 
+
+	if (what.selectedIndex < 1)				 
+	{ 
+		alert("Please enter your theater."); 
+		what.focus(); 
+		return false; 
+	} 
+       if (what.selectedIndex < 1)				 
+	{ 
+		alert("Please enter your movie."); 
+		what.focus(); 
+		return false; 
+	} 
+
+	return true; 
+}
+</script> 
+<h1 style="text-align: center"> REGISTRATION FORM </h1>	
+<div class="container">	 
+<form name="RegForm" action="/submit.php" onsubmit="return Ticket()" method="post"> 
+	
+	<p>Name: <input type="text" size=65 name="Name"> </p><br> 
+        
+	<p>Telephone: <input type="text" size=65 name="Telephone"> </p><br> 
+		
+	<p>SELECT YOUR THEATER
+		<select type="text" value="" name="Theater"> 
+			<option>INOX Urvasi Complex Mall</option> 
+			<option>Capital Cinemas (Trendset Mall)</option> 
+			<option>INOX Lepl Icon Mall</option> 
+			<option>Cinepolis (Pvp Square)</option> 
+			<option>Annapurna Cinema Hall</option></select></p><br>
+        <p>SELECT YOUR MOVIE
+		<select type="text" value="" name="MOVIE"> 
+			<option>O Pitta Katha(telugu)</option> 
+			<option>Sarileru neekevvaru(telugu)</option>
+                        <option>Troll World Tour(english)</option> 
+                        <option>The Rhythm Section(english)</option>
+                        <option>Fantasy Island(english)</option>
+                        <option>Street dancer(hindi)</option>
+                        <option>lootcase(hindi)</option>
+                        <option>Guns of Banaras(hindi)</option>
+			</select></p><br> 
+	<p>Comments: <textarea cols="55" name="Comment"> </textarea></p> 
+	<p><input type="submit" value="send" name="Submit">	 
+		<input type="reset" value="Reset" name="Reset"> 
+	</p>		 
+</form></div> 
+</body> 
+</html> 
+
+

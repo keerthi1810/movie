@@ -1,0 +1,131 @@
+<html> 
+<head> 
+<style> 
+
+tickets{										 
+	margin-left:10px; 
+	font-weight:bold ; 
+	float:center; 
+	clear:left; 
+	width:100px;
+        height:100px; 
+	text-align:left; 
+	margin-right:10px; 
+	font-family:sans-serif,bold, Arial, Helvetica; 
+	font-size:14px; 
+        
+}   
+input{
+width:570px;
+height:35px;    
+}
+select{
+width:570px;
+height:35px; 
+}
+.btn {
+  
+  background-color:red;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius:1px;
+  border:2px solid black;
+}
+
+.btn:hover {
+  opacity:2;
+}
+div { 
+        box-sizing:border-box; 
+	width:100%;
+height:140%;
+     	border:10px solid black; 
+	float: center; 
+	align-content: center; 
+	align-items: center; 
+        background-color: #026873;
+        background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+        linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+        linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+        linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+        background-size: 13px, 29px, 37px, 53px;
+}
+form {	
+       								 
+	margin: 0 auto; 
+	width: 600px; 
+        height:50px;
+}
+
+</style>
+</head> 
+<body> 
+<script> 
+ function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("user_input").value;
+    }
+function tickets()								 
+{ 
+	var name = document.forms["RegForm"]["Name"];			 
+        var phone = document.forms["RegForm"]["Telephone"]; 
+	
+	if (name.value == "")								 
+	{ 
+		window.alert("Please enter your name."); 
+		name.focus(); 
+		return false; 
+	} 
+
+	if (phone.value == "")						 
+	{ 
+		window.alert("Please enter your telephone number."); 
+		phone.focus(); 
+		return false; 
+	} 
+
+	if (what.selectedIndex < 1)				 
+	{ 
+		alert("Please enter your theater."); 
+		what.focus(); 
+		return false; 
+	} 
+       if (what.selectedIndex < 1)				 
+	{ 
+		alert("Please enter your movie."); 
+		what.focus(); 
+		return false; 
+	} 
+	return true; 
+}</script> 
+
+<div>
+<h1 style="text-align: center">BOOK YOUR MOVIE </h1>		 
+<h2><form name="RegForm" action="/submit.php" onsubmit="return tickets()" method="post"> 
+	
+	<p>Name: <input type="text" size=65 name="Name"> </p><br>	 
+	<p>Telephone: <input type="text" size=65 name="Telephone" id="phone"> </p><br> 
+		
+	
+        <p>SELECT YOUR MOVIE
+		<select type="text" value="      " name="MOVIE"> 
+			<option>O Pitta Katha(telugu)</option> 
+			<option>Sarileru neekevvaru(telugu)</option>
+                        <option>Troll World Tour(english)</option> 
+                        <option>The Rhythm Section(english)</option>
+                        <option>Fantasy Island(english)</option>
+                        <option>Street dancer(hindi)</option>
+                        <option>lootcase(hindi)</option>
+                        <option>Guns of Banaras(hindi)</option></select></p><br>
+			
+	 <p class="btn"><button type="submit" formaction="file:///C:/Users/Keerthi/Desktop/movie%20tickects/seatshow.html">select seat</button></p>
+                                        
+	<p class="btn"><input type="reset" value="Reset" name="Reset"> 
+	</p>
+</h2>
+</div>		 
+</form> 
+</body> 
+</html> 
+
+
